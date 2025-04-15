@@ -117,6 +117,7 @@
             font-weight: 600;
             text-transform: uppercase;
             transition: background-color 0.3s;
+            border: none;
         }
         
         .cta-button:hover {
@@ -146,13 +147,26 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
         
-        .feature-card img {
-            width: 80px;
-            height: 80px;
+        .feature-img {
+            padding: 2em;
+            width: 12em;
+            height: 12em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-radius: 50%;
-            object-fit: cover;
+            background-color: #f9f3f5;
+            border: 10px solid #e75a97;
+
+        }
+
+        .feature-img img {
+            height: 8em;
         }
         
         .feature-card h3 {
@@ -354,6 +368,17 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
+            .cta-button {
+                font-size: .8rem;
+                padding: 15px;
+            }
+
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -409,29 +434,23 @@
             <h2 class="section-title">Why Choose Toronto Cupcake?</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="40" cy="40" r="38" fill="#f9f3f5" stroke="#e75a97" stroke-width="2"/>
-                        <path d="M40 20c-11.046 0-20 8.954-20 20s8.954 20 20 20 20-8.954 20-20-8.954-20-20-20zm0 36c-8.837 0-16-7.163-16-16s7.163-16 16-16 16 7.163 16 16-7.163 16-16 16z" fill="#e75a97"/>
-                        <path d="M40 28v12l8 8" stroke="#e75a97" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    </svg>
+                    <div class="feature-img">
+                        <img src="clock.svg" alt="clock">
+                    </div>
                     <h3>Baked Fresh Daily</h3>
                     <p>Our cupcakes are baked fresh every day to guarantee maximum flavor and quality.</p>
                 </div>
                 <div class="feature-card">
-                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="40" cy="40" r="38" fill="#f9f3f5" stroke="#e75a97" stroke-width="2"/>
-                        <path d="M25 50h30M25 35h30M32 20v40M48 20v40" stroke="#e75a97" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        <path d="M40 15l10 10-10 10-10-10z" fill="#e75a97"/>
-                    </svg>
+                    <div class="feature-img">
+                        <img src="cupcake.svg" alt="cupcake">
+                    </div>
                     <h3>Custom Designs Available</h3>
                     <p>Need something unique? We offer custom cupcake designs to match your event's theme or personal taste.</p>
                 </div>
                 <div class="feature-card">
-                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="40" cy="40" r="38" fill="#f9f3f5" stroke="#e75a97" stroke-width="2"/>
-                        <path d="M20 32h10l5-12 5 24 5-32 5 20h10" stroke="#e75a97" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        <path d="M20 55l40-10M20 48h40" stroke="#e75a97" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    </svg>
+                    <div class="feature-img">
+                        <img src="bike.svg" alt="bike">
+                    </div>
                     <h3>Fast and Reliable Delivery</h3>
                     <p>We deliver across Toronto, the GTA, and beyond, ensuring your cupcakes arrive fresh and on time.</p>
                 </div>
